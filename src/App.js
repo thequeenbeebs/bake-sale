@@ -1,6 +1,7 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
 import NavBar from './components/NavBar'
+import ItemsContainer from './components/ItemsContainer'
 
 function App() {
   const [items, setItems] = useState([])
@@ -13,9 +14,7 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-      <ul>
-        {items.map(item => <img src={item.img}></img>)}
-      </ul>
+      <ItemsContainer items={items}/>
     </div>
   );
 }
