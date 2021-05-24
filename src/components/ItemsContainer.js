@@ -4,9 +4,13 @@ import TextField from '@material-ui/core/TextField';
 
 const ItemsContainer = (props) => {
     return (
-        <div>
-            {props.items.map(item => <img src={item.img}></img>)}
-        </div>
+        <Grid container spacing={24} style={{padding: 24}}>
+            {props.items.map(item => (
+                <Grid item xs={12} sm={6} lg={4} xl={3}>
+                    <img src={item.img}></img>
+                </Grid>
+                            ))}
+        </Grid>
     )
 
 }
